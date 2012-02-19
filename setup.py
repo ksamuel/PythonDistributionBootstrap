@@ -157,7 +157,7 @@ setup(
     ## For exemple, if you want you code to provide the command "myadmin.py"
     ## ['root/relative/path/to/script/myadmin.py']
     ## To avoid repeating, you probably something like
-    ## [os.path.join(, script) for script in
+    ## [os.path.join(src_directory, script) for script in
     ##     ['src_directory/relative/path/to/script_1.py',
     ##     'src_directory/relative/path/to/script_2.py'  ]]
     # scripts=,
