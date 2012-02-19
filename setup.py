@@ -47,9 +47,9 @@ src_directory =
 open('MANIFEST.in', 'w').write('\n'.join((
 
     "include *.txt *.rst",
-    "recursive-include %s *.txt *.rst" % src_directory
-    # "recursive-include %s *.png *.jpg *.gif" % src_directory
-    # "recursive-include %s *.css *.js, *.coffee" % src_directory
+    "recursive-include %s *.txt *.rst" % src_directory,
+    # "recursive-include %s *.png *.jpg *.gif" % src_directory,
+    # "recursive-include %s *.css *.js, *.coffee" % src_directory,
 
 ))
 
