@@ -49,7 +49,7 @@ open('MANIFEST.in', 'w').write('\n'.join((
     "include *.txt *.rst",
     "recursive-include %s *.txt *.rst" % src_directory,
     # "recursive-include %s *.png *.jpg *.gif" % src_directory,
-    # "recursive-include %s *.css *.js, *.coffee" % src_directory,
+    # "recursive-include %s *.css *.js *.coffee" % src_directory,
 
 ))
 
@@ -126,7 +126,7 @@ setup(
     # You can require a specific version.
     # be available in pypi
     # E.G: ["gunicorn", "docutils >= 0.3", "BeautifulSoup==1.1", "lxml==0.5a7"]
-    install_requires = ,
+    install_requires= ,
 
 
     ###########################################################################
@@ -145,7 +145,7 @@ setup(
     # of a package (so no use for web static files, images, etc)
     #
     # You WANT that set to True because it will copy files from the MANIFEST.in
-    include_package_data = True,
+    include_package_data=True,
 
     ## An optional string being the URL of the official website for this code
     ## A lot of people just put the URL of the code repository or the doc
@@ -166,7 +166,7 @@ setup(
     ## It's more accurate than a package
     ## espcially usefull if you have lonelly modules at the root level
     # E.G: ['mod1', 'pkg.mod2'] if you have mod1.py and pkg/mod2.py
-    # py_modules = ,
+    # py_modules= ,
 
     ## A mapping package/directory, so you can choose where setuptools will
     ## import packages listed in the `packages` parameter
@@ -184,7 +184,7 @@ setup(
     ##
     ## If you get get missing package after settings this, it's because
     ## find_package() use value from this settings to tweak accordingly
-    # package_dir = ,
+    # package_dir= ,
 
     ## Iterable of string bein URLs
     ## If your project depends on packages that aren't registered in PyPI, you may
@@ -196,7 +196,7 @@ setup(
     ## direct download URLs, or
     ## the URLs of web pages that contain direct download links
     ## E.G: ["http://peak.telecommunity.com/snapshots/"],
-    # dependency_links =
+    # dependency_links=
 
     ## List of strings being the name of EXTERNAL modules you embed in your
     ## code and therefor, that you provide
