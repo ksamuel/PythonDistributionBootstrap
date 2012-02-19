@@ -51,7 +51,7 @@ open('MANIFEST.in', 'w').write('\n'.join((
     # "recursive-include %s *.png *.jpg *.gif" % src_directory,
     # "recursive-include %s *.css *.js *.coffee" % src_directory,
 
-))
+)))
 
 
 
