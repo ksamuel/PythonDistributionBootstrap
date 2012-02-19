@@ -9,6 +9,18 @@ from setuptools import setup, find_packages
 # DISTUTILS_DEBUG = True # uncomment only to debug errors when running setup.py
 
 
+# BEFORE FAILLING MISERABLY:
+#
+# If you get any encoding error, it's most probably a known distutils bugs
+# use strip_non_ascii(youstring) to replace non ascii caracters
+# http://bugs.python.org/issue13114
+# Either upgrade your Python, or use this function
+# I don't know any other good way to do this, sorry
+# This function expect unicode, use decode() before applying
+strip_non_ascii = lambda s: normalize('NFKD', s).encode('ascii','ignore')
+
+
+
 
 ######################### STEP 1: choose a source root dir #####################
 
@@ -119,6 +131,9 @@ setup(
     # It's common to just dump the README here, so it's the default value
     # but you can replace it with whatever you want
     # It will be used by Pypi to build the web page for your package
+    #
+    # If something fails with a unicode error, easiest fix is
+    # strip_non_ascii(open('README.rst').read().decode('yourencoding'))
     long_description=open('README').read(),
 
     # An iterable of strings being the name of dependancies for this code
